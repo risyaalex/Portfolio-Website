@@ -40,7 +40,7 @@ menuItems.forEach(function(menuItem) {
     let icon = this.querySelector("i.fa-solid");
     if (icon) {
       icon.style.transform = "scale(1.3)";
-      icon.style.transition = "transform 0.3s ease";
+      icon.style.transition = "transform 0.5s ease";
       icon.style.color = "rgb(255, 106, 0)";
     }
   });
@@ -54,8 +54,23 @@ menuItems.forEach(function(menuItem) {
     let icon = this.querySelector("i.fa-solid");
     if (icon) {
       icon.style.transform = "rotate(90deg)";
-        icon.style.transition = "transform 0.3s ease";
+        icon.style.transition = "transform 0.5s ease";
         icon.style.color = "#030303";
+    }
+  });
+});
+
+// Smooth scroll
+var menuLinks = document.querySelectorAll("#menu li a");
+
+menuLinks.forEach(function(link) {
+  link.addEventListener("click", function(event) {
+    event.preventDefault(); 
+
+    var target = document.querySelector(this.getAttribute("href")); 
+
+    if (target) {
+      target.scrollIntoView({ behavior: "smooth" }); 
     }
   });
 });

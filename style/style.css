@@ -5,6 +5,10 @@
     padding: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     min-height: 100vh;
     font-family: 'Roboto Mono', monospace;
@@ -85,7 +89,7 @@ h1, h2, h3, h4, h5, h6 {
 
 
 
-/* Right column */
+/* Right column / MAIN */
 
 #content {
     min-height: calc(100vh - 100px);
@@ -93,9 +97,12 @@ h1, h2, h3, h4, h5, h6 {
     width: calc(65% - 100px);
 }
 
-#content section {
+#home, #about, #projects, #resume, #contact {
     padding: 50px; 
+    min-height: 100vh;
 }
+
+
 
 
 /* LARGE and  XL */

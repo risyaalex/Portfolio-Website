@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Roboto Mono', monospace;
+}
+
+p {
+    line-height: 1.5rem;
+    margin: 10px 0;
+}
+h1, h2, h3, h4, h5, h6 {
+    margin: 5px 0;
+}
+
+
+/* Left column */
+
+#fixedLeftNav {
+    position:fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background-color: lightgray;
+    width: calc(35% - 100px);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    min-height: calc(100vh - 100px);
+}
+
+.fixedLeftNav-top {
+    align-self: flex-start; 
+    padding: 30px 50px;
+}
+
+.fixedLeftNav-nav {
+    align-self: center;
+    padding:30px 50px;
+}
+
+.fixedLeftNav-bottom {
+    align-self: flex-end;
+    padding: 30px 50px;
+    width: 100%;
+}
+
+
+/* Navbar */
+
+.mobileMenu, .logo {
+    display: none;
+}
+
+#menu li {
+    list-style-type: none;
+    padding: 7px 0;
+}
+
+#menu li a {
+    font-size: 1.1rem;
+    color: #030303;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.fa-code-commit {
+    transition: color 0.3s ease;
+}
+
+.hoverMenu  {
+    color: rgb(255, 106, 0) !important;
+}
+
+.hoverMenu a, .hoverMenu .fa-code-commit {
+    color: rgb(255, 106, 0) !important;
+}
+
+
+
+
+/* Right column */
+
+#content {
+    min-height: calc(100vh - 100px);
+    margin-left: 35%;
+    width: calc(65% - 100px);
+}
+
+#content section {
+    padding: 50px; 
+}
+
+
+/* LARGE and  XL */
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+    body {
+        font-size: 0.9rem;
+    }
+    p {
+        line-height: 1.2rem;
+        margin: 5px 0;
+    }
+
+    #menu li {
+        padding: 4px 0;
+    }
+    #fixedLeftNav {
+        max-width: calc(35% - 60px);
+        min-height: calc(100vh - 60px);
+    }
+
+    #content {
+        min-height: calc(100vh - 60px);
+        margin-left: 35%;
+        width: calc(65% - 60px);
+    }
+}
+
+
+/* SMALL and MEDIUM */
+
+@media only screen and (max-width: 991px) {
+
+    h1 {
+        font-size: 1.4rem;
+    }
+    h3 {
+        font-size: 1.2rem;
+    }
+    #fixedLeftNav {
+        width: calc(100% - 40px);
+        padding: 20px;
+        min-height: auto; 
+        position: relative;
+        display: block;
+    }
+
+    .fixedLeftNav-nav {
+        align-self: self-start;
+        padding: 10px 30px;
+    }
+    #menu {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+     .itemsMenu {
+        display: none;
+    }
+    .mobileMenu {
+        display: block;
+        cursor: pointer;
+    }
+
+    .logo {
+        display: block;
+        font-size: 1.2rem;
+        user-select: none;
+        flex: 1;
+        min-width: 50%;
+    }
+
+    .displayNoneMobile{
+        display: none !important;
+    }
+
+    #content {
+        min-height: auto;
+        margin-left: auto;
+        width: 100%;
+    }
+
+    .active {
+        display:block;
+        width: 80%;
+    }
+    #menu :nth-child(3) {
+        margin-top: 20px;
+    } 
+
+
+}
+
+/* SMALL */
+
+@media only screen and (max-width: 576px) {
+    h1 {
+        font-size: 1.2rem;
+    }
+    h3 {
+        font-size: 1rem;
+    }
+}
+
+/* X-SMALL */
+
+@media only screen and (max-width: 300px) {
+    #fixedLeftNav {
+            display: block;
+        }
+
+    .mobileMenu {
+        position: relative;
+        width: 100%;
+    }
+
+    #menu { 
+        padding: 0 20px 20px;
+}

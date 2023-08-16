@@ -1,7 +1,8 @@
-let mobileMenu = document.querySelector(".mobileMenu");
-let menuItems = document.querySelectorAll(".itemsMenu");
-let menuLinks = document.querySelectorAll(".itemsMenu a");
-let icons = document.querySelectorAll(".itemsMenu i.fa-solid");
+const mobileMenu = document.querySelector(".mobileMenu");
+const menuItems = document.querySelectorAll(".itemsMenu");
+const menuLinks = document.querySelectorAll(".itemsMenu a");
+const icons = document.querySelectorAll(".itemsMenu i.fa-solid");
+const sections = document.querySelectorAll("#content section");
 
 // Mobile menu show/hide
 mobileMenu.addEventListener("click", function () {
@@ -79,3 +80,20 @@ menuLinks.forEach(function(link) {
   });
 });
 
+// Adding .hoverMenu on scroll
+
+window.addEventListener("scroll", function() {
+  let currentPosition = window.scrollY;
+
+  sections.forEach(function(section, index) {
+    let offsetTop = section.offsetTop;
+    let offsetBottom = offsetTop + section.clientHeight;
+
+    if (currentPosition >= offsetTop && currentPosition < offsetBottom) {
+      menuItems.forEach(function(item) {
+        item.classList.remove("hoverMenu");
+      });
+      menuItems[index + 1].classList.add("hoverMenu"); 
+    }
+  });
+});

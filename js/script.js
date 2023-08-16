@@ -63,15 +63,16 @@ menuItems.forEach(function(menuItem) {
 
 // Smooth scroll
 
-
 menuScrollLinks.forEach(function(link) {
   link.addEventListener("click", function(event) {
     event.preventDefault(); 
 
-    var target = document.querySelector(this.getAttribute("href")); 
+    var targetId = this.getAttribute("href"); 
+    var target = document.querySelector(targetId); 
 
     if (target) {
-      target.scrollIntoView({ behavior: "smooth" }); 
-    }
+      var offset = document.querySelector("#fixedLeftNav").offsetHeight; 
+      var targetPosition = target.offsetTop - offset; 
+      window.scrollTo({ top: targetPosition, behavior: "smooth" }); 
   });
 });

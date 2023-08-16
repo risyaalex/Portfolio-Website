@@ -144,10 +144,11 @@ h1, h2, h3, h4, h5, h6 {
     }
     #fixedLeftNav {
         width: calc(100% - 40px);
-        padding: 20px;
+        padding: 10px 20px;
         min-height: auto; 
-        position: relative;
+        position: sticky;
         display: block;
+        z-index: 999;
     }
 
     .fixedLeftNav-nav {
@@ -183,6 +184,14 @@ h1, h2, h3, h4, h5, h6 {
         min-height: auto;
         margin-left: auto;
         width: 100%;
+    }
+
+        #home,
+        #about,
+        #projects,
+        #resume,
+        #contact {
+         
     }
 
     .active {

@@ -66,13 +66,16 @@ menuLinks.forEach(function(link) {
   link.addEventListener("click", function(event) {
     event.preventDefault();
 
-    var targetId = this.getAttribute("href");
-    var target = document.querySelector(targetId);
+    let targetId = this.getAttribute("href");
+    let target = document.querySelector(targetId);
 
-    if (target) {
-      var offset = document.querySelector("#fixedLeftNav").offsetHeight;
-      var targetPosition = target.offsetTop - offset;
+    if (window.innerWidth < 992) {
+      let offset = document.querySelector("#fixedLeftNav").offsetHeight;
+      let targetPosition = target.offsetTop - offset;
       window.scrollTo({ top: targetPosition, behavior: "smooth" });
+    } else {
+      target.scrollIntoView({ behavior: "smooth" });
     }
   });
 });
+

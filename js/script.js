@@ -2,7 +2,6 @@ let mobileMenu = document.querySelector(".mobileMenu");
 let menuItems = document.querySelectorAll(".itemsMenu");
 let menuLinks = document.querySelectorAll(".itemsMenu a");
 let icons = document.querySelectorAll(".itemsMenu i.fa-solid");
-let menuScrollLinks = document.querySelectorAll("#menu li a");
 
 // Mobile menu show/hide
 mobileMenu.addEventListener("click", function () {
@@ -63,16 +62,17 @@ menuItems.forEach(function(menuItem) {
 
 // Smooth scroll
 
-menuScrollLinks.forEach(function(link) {
+menuLinks.forEach(function(link) {
   link.addEventListener("click", function(event) {
-    event.preventDefault(); 
+    event.preventDefault();
 
-    var targetId = this.getAttribute("href"); 
-    var target = document.querySelector(targetId); 
+    var targetId = this.getAttribute("href");
+    var target = document.querySelector(targetId);
 
     if (target) {
-      var offset = document.querySelector("#fixedLeftNav").offsetHeight; 
-      var targetPosition = target.offsetTop - offset; 
-      window.scrollTo({ top: targetPosition, behavior: "smooth" }); 
+      var offset = document.querySelector("#fixedLeftNav").offsetHeight;
+      var targetPosition = target.offsetTop - offset;
+      window.scrollTo({ top: targetPosition, behavior: "smooth" });
+    }
   });
 });

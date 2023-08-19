@@ -3,6 +3,7 @@ const menuItems = document.querySelectorAll(".itemsMenu");
 const menuLinks = document.querySelectorAll(".itemsMenu a");
 const icons = document.querySelectorAll(".itemsMenu i.fa-solid");
 const sections = document.querySelectorAll("#content section");
+const imgElement = document.getElementById("myphoto");
 
 // Mobile menu show/hide
 mobileMenu.addEventListener("click", function () {
@@ -83,7 +84,7 @@ menuLinks.forEach(function(link) {
 // Adding .hoverMenu on scroll
 
 window.addEventListener("scroll", function() {
-  let currentPosition = window.scrollY;
+  let currentPosition = window.scrollY + window.innerHeight / 2; 
 
   sections.forEach(function(section, index) {
     let offsetTop = section.offsetTop;
@@ -93,7 +94,38 @@ window.addEventListener("scroll", function() {
       menuItems.forEach(function(item) {
         item.classList.remove("hoverMenu");
       });
-      menuItems[index + 1].classList.add("hoverMenu"); 
+      menuItems[index].classList.add("hoverMenu"); 
     }
   });
 });
+// Adding Pulse Effect
+
+function addPulseEffect() {
+  const originalBoxShadow = "0 0 30px rgb(255, 106, 0)";
+  const expandedBoxShadow = "0 0 70px rgb(255, 106, 0)";
+
+  imgElement.style.boxShadow = originalBoxShadow;
+
+  function pulse(count) {
+    imgElement.style.transition = "box-shadow 0.5s ease-in-out";
+    imgElement.style.boxShadow = expandedBoxShadow;
+
+    setTimeout(() => {
+      imgElement.style.transition = "box-shadow 0.5s ease-in-out";
+      imgElement.style.boxShadow = originalBoxShadow;
+
+      if (count < 2) {
+        setTimeout(() => {
+          pulse(count + 1);
+        }, 1500); 
+      }
+    }, 1500);
+  }
+  pulse(0);
+}
+
+addPulseEffect();
+
+
+
+

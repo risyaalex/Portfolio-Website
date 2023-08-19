@@ -12,6 +12,7 @@ html {
 body {
     min-height: 100vh;
     font-family: 'Roboto Mono', monospace;
+    background: url("../images/bg.jpg") no-repeat fixed top / cover;
 }
 
 p {
@@ -28,21 +29,26 @@ h6 {
     margin: 5px 0;
 }
 
+h3 {
+    color: rgb(255, 106, 0);
+}
 
-/* Left column */
+
 
 #fixedLeftNav {
     position: fixed;
     left: 0;
     top: 0;
     bottom: 0;
-    background-color: lightgray;
     width: calc(35% - 100px);
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     min-height: calc(100vh - 100px);
 }
+
+/* Left column */
+
 
 .fixedLeftNav-top {
     align-self: flex-start;
@@ -102,7 +108,8 @@ h6 {
 #content {
     min-height: calc(100vh - 100px);
     margin-left: 35%;
-    width: calc(65% - 100px);
+    width: calc(65% - 50px);
+    
 }
 
 #home,
@@ -111,7 +118,23 @@ h6 {
 #resume,
 #contact {
     padding: 50px;
-    min-height: 100vh;
+    min-height: 80vh;
+}
+
+.align-right {
+    float: right;
+    margin: 10px 0 10px 20px;
+}
+
+.round {
+    border-radius: 50%;
+    width: 300px;
+}
+
+#home {
+display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
 }
 
 

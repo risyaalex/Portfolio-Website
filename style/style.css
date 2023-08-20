@@ -140,11 +140,10 @@ h3 {
 #home,
 #about,
 #projects,
-#resume,
 #contact {
     padding: 50px 20px 50px 20px;
     min-height: 80vh;
-    border-bottom: 1px solid rgb(255, 106, 0);
+    /* border-bottom: 1px solid rgb(255, 106, 0); */
 }
 
 .align-right {

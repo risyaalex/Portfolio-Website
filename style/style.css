@@ -229,7 +229,7 @@ footer .fa-brands:hover {
         padding: 10px 20px;
         transform: skew(-10deg);
         display: inline-block;
-        font-size: 1.3rem;
+        font-size: 1.2rem !important;
 }
 #about h3 {
     margin: 20px 0;

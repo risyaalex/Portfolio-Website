@@ -3,6 +3,7 @@
 * {
     margin: 0;
     padding: 0;
+    cursor: none;   
 }
 
 html {
@@ -13,11 +14,14 @@ body {
     min-height: 100vh;
     font-family: 'Roboto Mono', monospace;
     background: url("../images/bg.jpg") no-repeat fixed top / cover;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 p {
     line-height: 1.5rem;
     margin: 10px 0;
+    text-align: justify;
 }
 
 h1,
@@ -33,7 +37,26 @@ h3 {
     color: rgb(255, 106, 0);
 }
 
+#cursor,
+#cursor-outline {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 100%;
+    transform: translate(-50%, -50%);
+}
 
+#cursor {
+    height: 10px;
+    width: 10px;
+    background: rgb(255, 106, 0);
+}
+
+#cursor-outline {
+    height: 25px;
+    width: 25px;
+    background: rgba(255, 106, 0, 0.5);
+}
 
 #fixedLeftNav {
     position: fixed;
@@ -64,6 +87,10 @@ h3 {
     align-self: flex-end;
     padding: 30px 50px;
     width: 100%;
+}
+
+.displayNoneMobile {
+    text-align: left;
 }
 
 
@@ -101,8 +128,6 @@ h3 {
 }
 
 
-
-
 /* Right column / MAIN */
 
 #content {
@@ -117,7 +142,7 @@ h3 {
 #projects,
 #resume,
 #contact {
-    padding: 50px;
+    padding: 50px 20px 50px 20px;
     min-height: 80vh;
 }
 
@@ -126,19 +151,64 @@ h3 {
     margin: 10px 0 10px 20px;
 }
 
+.align-left {
+    float: left;
+    margin: 10px 20px 10px 0px;
+}
+
 .round {
     border-radius: 50%;
-    width: 300px;
+    width: 35%;
+}
+
+.round:hover {
+    box-shadow: 0 0 30px #457032;
 }
 
 #home {
-display: grid;
+    display: grid;
     grid-template-columns: 1fr;
-    align-items: center;
+    align-items:center;
 }
 
+#icons {
+    display: flex;
+    justify-content: space-around;
+    padding: 0 20%;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
 
+.icons-image {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    width: 50px;
+    margin-bottom: 100px;
+}
 
+.icons-image:hover {
+    opacity: 1;
+    transform: translateY(0) scale(1.2);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.home-card {
+    background-color: rgba(230, 230, 230, 0.5);
+    padding: 30px;
+    border-radius: 20px;
+}
+
+#about h2 {
+    margin-bottom: 30px;
+}
+#about h3 {
+    margin: 20px 0;
+}
+
+#about hr {
+    margin: 20px 0;
+}
 
 /* LARGE and  XL */
 
@@ -173,6 +243,10 @@ display: grid;
 
 @media only screen and (max-width: 991px) {
 
+    * {
+        cursor:alias;   
+    }
+
     h1 {
         font-size: 1.4rem;
     }
@@ -188,6 +262,15 @@ display: grid;
         position: sticky;
         display: block;
         z-index: 999;
+        background-color: #fff;
+    }
+    #home,
+    #about,
+    #projects,
+    #resume,
+    #contact {
+        padding: 30px;
+        min-height: 50vh;
     }
 
     .fixedLeftNav-nav {
@@ -236,7 +319,16 @@ display: grid;
     #menu :nth-child(3) {
         margin-top: 20px;
     }
-
+    .logo {
+         color: rgb(255, 106, 0);
+        font-weight: bold;
+    }
+    
+    .logo-span {
+        color: #000;
+        font-size: 0.9rem;
+    }
+    
 
 }
 
@@ -245,11 +337,46 @@ display: grid;
 @media only screen and (max-width: 576px) {
     h1 {
         font-size: 1.2rem;
+        font-weight: bold;
     }
 
     h3 {
         font-size: 1rem;
     }
+    #icons {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 5%;
+    }
+    .icons-image{
+        width: 40px;
+        margin-bottom: 50px;
+    }
+    .home-card {
+        background-color: white;
+        padding: 0;
+    }
+
+    .home-card .image {
+        text-align: center;
+    }
+
+    .align-right {
+        float: none;
+        margin: 0px;
+    }
+
+    .align-left {
+        float: none;
+        margin: 0px;
+    }
+    #home {
+        display: block;
+    }
+    .home-card .round {
+        width: 300px;
+    }
+
 }
 
 /* X-SMALL */
@@ -267,5 +394,9 @@ display: grid;
     #menu {
         padding: 0 20px 20px;
     }
+    .round {
+        width: 200px;
+    }
+    
 
 }

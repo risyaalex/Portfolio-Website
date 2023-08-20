@@ -43,35 +43,37 @@
                 class="fa-solid fa-code-commit fa-rotate-90 fa-2xl displayNoneMobile"
                 style="color: #030303"
               ></i>
-              <a href="#home">Home</a>
+              <a class="scroll-a" href="#home">Home</a>
             </li>
             <li class="itemsMenu">
               <i
                 class="fa-solid fa-code-commit fa-rotate-90 fa-2xl displayNoneMobile"
                 style="color: #030303"
               ></i>
-              <a href="#about">About Me</a>
+              <a class="scroll-a" href="#about">About</a>
             </li>
             <li class="itemsMenu">
               <i
                 class="fa-solid fa-code-commit fa-rotate-90 fa-2xl displayNoneMobile"
                 style="color: #030303"
               ></i>
-              <a href="#projects">Projects</a>
+              <a class="scroll-a" href="#projects">Projects</a>
             </li>
             <li class="itemsMenu">
               <i
                 class="fa-solid fa-code-commit fa-rotate-90 fa-2xl displayNoneMobile"
                 style="color: #030303"
               ></i>
-              <a href="resume-Antonova.pdf">Resume</a>
+              <a href="resume.pdf" type="application/pdf" target="_blank"
+                >Resume</a
+              >
             </li>
             <li class="itemsMenu">
               <i
                 class="fa-solid fa-code-commit fa-rotate-90 fa-2xl displayNoneMobile"
                 style="color: #030303"
               ></i>
-              <a href="#contact">Contact</a>
+              <a class="scroll-a" href="#contact">Contact</a>
             </li>
           </ul>
         </nav>
@@ -205,8 +207,9 @@
         </p>
       </section>
       <section id="projects">projects</section>
-      <!-- <section id="resume">Resume</section> -->
+      <section id="resume"></section>
       <section id="contact">
+        <h2>Contact Me:</h2>
         <p>
           You can reach me at
           <a href="tel:+16476491887">(647) 649-1887</a> or via email at
@@ -220,6 +223,22 @@
           ></a>
         </p>
         <p>or send me a message using this contact form:</p>
+
+        <div>
+          <form id="contactMe">
+            <label for="name"></label>
+            <input type="text" id="name" placeholder="Name" />
+            <label for="email"></label>
+            <input type="text" id="email" placeholder="Email Address" />
+
+            <label></label>
+            <input type="password" placeholder="Password" />
+
+            <button class="red" type="button">
+              <i class="icon ion-md-lock"></i> Log in
+            </button>
+          </form>
+        </div>
       </section>
     </main>
   </body>

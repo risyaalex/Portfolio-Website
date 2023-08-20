@@ -1,6 +1,6 @@
 const mobileMenu = document.querySelector(".mobileMenu");
 const menuItems = document.querySelectorAll(".itemsMenu");
-const menuLinks = document.querySelectorAll(".itemsMenu a");
+const menuLinks = document.querySelectorAll(".itemsMenu .scroll-a");
 const icons = document.querySelectorAll(".itemsMenu i.fa-solid");
 const sections = document.querySelectorAll("#content section");
 const imgElement = document.getElementById("myphoto");
@@ -160,15 +160,15 @@ document.addEventListener('DOMContentLoaded', function () {
       }, 100);
     });
 
-    document.getElementById('btn').addEventListener('mouseover', function () {
-      cursorOutline.style.height = '25px';
-      cursorOutline.style.width = '25px';
-    });
+    // document.getElementById('btn').addEventListener('mouseover', function () {
+    //   cursorOutline.style.height = '25px';
+    //   cursorOutline.style.width = '25px';
+    // });
 
-    document.getElementById('btn').addEventListener('mouseleave', function () {
-      cursorOutline.style.height = '15px';
-      cursorOutline.style.width = '15px';
-    });
+    // document.getElementById('btn').addEventListener('mouseleave', function () {
+    //   cursorOutline.style.height = '15px';
+    //   cursorOutline.style.width = '15px';
+    // });
     
   }
 });

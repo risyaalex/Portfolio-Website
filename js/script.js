@@ -186,7 +186,7 @@ document.addEventListener('DOMContentLoaded', function () {
     setTimeout(function () {
       icon.style.opacity = 1;
       icon.style.transform = 'translateY(0)';
-    }, index * 500); 
+    }, index * 200); 
   });
   
 });

@@ -59,6 +59,7 @@ h3 {
     left: 0;
     border-radius: 100%;
     transform: translate(-50%, -50%);
+    z-index: 999999999;
 }
 
 #cursor {
@@ -222,7 +223,7 @@ footer .fa-brands:hover {
     border-radius: 20px;
 }
 
-#about h2, #contact h2 {
+#about h2, #contact h2, #projects h2 {
     margin-bottom: 30px;
     background-color: rgba(255, 106, 0, 0.3);
         padding: 10px 20px;
@@ -235,6 +236,57 @@ footer .fa-brands:hover {
 
 #about hr {
     margin: 20px 0;
+}
+
+/* Portfolio */
+
+.portfolio {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.filter-button {
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    background-color: #666;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+
+.filter-button:hover {
+    background-color: rgb(255, 106, 0)
+}
+
+.active {
+    background-color: #000
+}
+
+.portfolio-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.portfolio-item {
+    margin: 10px;
+    overflow: hidden;
+}
+
+.portfolio-item img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.portfolio-item.expanded img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
 }
 
 
@@ -314,6 +366,12 @@ footer .fa-brands:hover {
 }
 #scrollTopButton .fa-solid:hover {
    color: rgb(255, 106, 0) !important;
+}
+
+.copy p {
+    font-size: 0.8rem;
+    text-align: center;
+    padding: 10px 20px 10px 20px;
 }
     
 
@@ -491,7 +549,10 @@ footer .fa-brands:hover {
     .home-card .round {
         width: 300px;
     }
-
+    .portfolio-item img {
+        width: 120px;
+        height: 120px;
+    }
 }
 
 /* X-SMALL */

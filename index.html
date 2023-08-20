@@ -14,6 +14,12 @@
       crossorigin="anonymous"
       defer
     ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
   </head>
   <body>
     <div id="cursor"></div>
@@ -210,7 +216,96 @@
           Ukraine)
         </p>
       </section>
-      <section id="projects">projects</section>
+      <section id="projects">
+        <h2>Some of my projects</h2>
+        <div class="portfolio">
+          <button class="filter-button" data-filter="all">All</button>
+          <button class="filter-button" data-filter="web">Sites</button>
+          <button class="filter-button" data-filter="design">Design</button>
+        </div>
+
+        <div class="portfolio-gallery">
+          <div class="portfolio-item design">
+            <a
+              href="images/portfolio/jg/logo.jpg"
+              data-fancybox="gallery"
+              data-caption="Collaboration with Jacques Germanier Group (Switzerland). Logo update."
+            >
+              <img src="images/portfolio/jg/logo.jpg" alt="JG logo"
+            /></a>
+          </div>
+          <div class="portfolio-item design">
+            <a
+              href="images/portfolio/jg/JG.jpg"
+              data-fancybox="gallery"
+              data-caption="Collaboration with Jacques Germanier Group (Switzerland). Development of label design for wines."
+              ><img
+                src="images/portfolio/jg/JG.jpg"
+                alt="Jacques Germanier Group"
+            /></a>
+          </div>
+          <div class="portfolio-item design">
+            <a
+              href="images/portfolio/jg/brut.jpg"
+              data-fancybox="gallery"
+              data-caption="Collaboration with Jacques Germanier Group (Switzerland). Development of label design for wines."
+              ><img
+                src="images/portfolio/jg/brut.jpg"
+                alt="Jacques Germanier Group"
+            /></a>
+          </div>
+          <div class="portfolio-item design">
+            <a
+              href="images/portfolio/jg/brut2.jpg"
+              data-fancybox="gallery"
+              data-caption="Collaboration with Jacques Germanier Group (Switzerland). Development of label design for wines."
+              ><img
+                src="images/portfolio/jg/brut2.jpg"
+                alt="Jacques Germanier Group"
+            /></a>
+          </div>
+          <div class="portfolio-item design">
+            <a
+              href="images/portfolio/jg/etiquette.jpg"
+              data-fancybox="gallery"
+              data-caption="Collaboration with Jacques Germanier Group (Switzerland). Development of label design for wines."
+              ><img
+                src="images/portfolio/jg/etiquette.jpg"
+                alt="Jacques Germanier Group"
+            /></a>
+          </div>
+          <div class="portfolio-item design">
+            <a
+              href="images/portfolio/jg/wine.jpg"
+              data-fancybox="gallery"
+              data-caption="Collaboration with Jacques Germanier Group (Switzerland). Development of label design for wines."
+              ><img
+                src="images/portfolio/jg/wine.jpg"
+                alt="Jacques Germanier Group"
+            /></a>
+          </div>
+          <div class="portfolio-item design">
+            <a
+              href="images/portfolio/jg/1-4-new-scaled.jpg"
+              data-fancybox="gallery"
+              data-caption="Collaboration with Jacques Germanier Group (Switzerland). Brochure print design development."
+              ><img
+                src="images/portfolio/jg/1-4-new-scaled.jpg"
+                alt="Jacques Germanier Group"
+            /></a>
+          </div>
+          <div class="portfolio-item design">
+            <a
+              href="images/portfolio/jg/2-3-scaled.jpg"
+              data-fancybox="gallery"
+              data-caption="Collaboration with Jacques Germanier Group (Switzerland). Brochure print design development."
+              ><img
+                src="images/portfolio/jg/2-3-scaled.jpg"
+                alt="Jacques Germanier Group"
+            /></a>
+          </div>
+        </div>
+      </section>
       <section id="resume"></section>
       <section id="contact">
         <h2>Contact Me:</h2>
@@ -262,6 +357,16 @@
         <button id="scrollTopButton" class="hidden">
           <i class="fa-solid fa-circle-chevron-up fa-2xl"></i>
         </button>
+      </section>
+      <section class="copy">
+        <!-- Copyright -->
+        <script>
+          document.write(
+            "<p>All rights reserved &copy; " +
+              new Date().getFullYear() +
+              " Oleksandra Antonova</p>"
+          );
+        </script>
       </section>
     </main>
   </body>

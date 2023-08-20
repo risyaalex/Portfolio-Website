@@ -194,16 +194,6 @@ document.addEventListener('DOMContentLoaded', function () {
       }, 100);
     });
 
-    // document.getElementById('btn').addEventListener('mouseover', function () {
-    //   cursorOutline.style.height = '25px';
-    //   cursorOutline.style.width = '25px';
-    // });
-
-    // document.getElementById('btn').addEventListener('mouseleave', function () {
-    //   cursorOutline.style.height = '15px';
-    //   cursorOutline.style.width = '15px';
-    // });
-    
   }
 });
 
@@ -223,6 +213,44 @@ document.addEventListener('DOMContentLoaded', function () {
     }, index * 200); 
   });
   
+});
+
+
+// Portfolio
+
+ const filterButtons = document.querySelectorAll(".filter-button");
+  const portfolioItems = document.querySelectorAll(".portfolio-item");
+  const portfolioGallery = document.querySelector(".portfolio-gallery");
+
+  let currentIndex = 0;
+  let expanded = false;
+
+  filterButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const filterValue = button.getAttribute("data-filter");
+
+      portfolioItems.forEach((item) => {
+        if (filterValue === "all" || item.classList.contains(filterValue)) {
+          item.style.display = "block";
+        } else {
+          item.style.display = "none";
+        }
+      });
+
+      filterButtons.forEach((btn) => btn.classList.remove("active"));
+      button.classList.add("active");
+
+      currentIndex = 0; 
+      closeExpandedImage();
+    });
+  });
+
+  
+ $(document).ready(function () {
+  $('[data-fancybox="gallery"]').fancybox({
+    loop: true,
+    buttons: ["close"], 
+  });
 });
 
 

@@ -24,6 +24,21 @@ p {
     text-align: justify;
 }
 
+a {
+    color: #333;
+    font-weight: bold;
+}
+
+a:hover {
+    color: rgb(255, 106, 0);
+    text-decoration: none;
+}
+
+input,
+button {
+    cursor:alias;
+}
+
 h1,
 h2,
 h3,
@@ -127,6 +142,12 @@ h3 {
     color: rgb(255, 106, 0) !important;
 }
 
+/* Footer */ 
+
+footer .fa-brands:hover {
+    color: rgb(255, 106, 0)!important;
+}
+
 
 /* Right column / MAIN */
 
@@ -215,6 +236,62 @@ h3 {
 #about hr {
     margin: 20px 0;
 }
+
+
+/* Contact */
+#contact p {
+    text-align: center;
+}
+
+#contactMe {
+  display: grid;
+  grid-template-rows: repeat(3, auto);  
+  gap:20px;
+  max-width: 70%;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+#contactMe input, #contactMe textarea {
+    padding: 15px 20px;
+    border-radius: 10px;
+    border: 1px solid #999;
+    font-size: 1rem;
+    font-family: 'Roboto Mono', monospace;
+}
+
+#contactMe input:focus-visible,
+#contactMe textarea:focus-visible {
+    outline: none;
+    border: 1px solid #fff;
+    box-shadow: 0 0 5px rgba(255, 106, 0, 1);
+}
+
+#contactMe button {
+    box-shadow: -3px -3px 10px #cbcbcb, 3px 3px 10px #cbcbcb;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    padding: 15px 60px;
+    border: none;
+    color: #333;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    max-width: 60%;
+    margin: 0 auto;
+}
+#contactMe button:hover {
+        box-shadow: -2px -2px 5px #fff, 2px 2px 5px #999;
+    }
+
+#contactMe button:active {
+        box-shadow: inset 1px 1px 2px #999, inset -1px -1px 2px #fff;
+    }
+
+#contact .fa-brands:hover {
+    color: rgb(255, 106, 0) !important;
+}
+    
 
 /* LARGE and  XL */
 
@@ -333,7 +410,16 @@ h3 {
         color: #000;
         font-size: 0.9rem;
     }
-    
+
+    #contactMe {
+        max-width: 100%;
+        padding: 20px;
+    }
+    #contactMe button {
+    padding: 15px 60px;
+    max-width: 100%;
+
+    }
 
 }
 

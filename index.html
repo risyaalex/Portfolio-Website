@@ -79,7 +79,11 @@
         </nav>
       </div>
       <div class="fixedLeftNav-bottom displayNoneMobile">
-        <footer>social media</footer>
+        <footer>
+          <a href="https://www.linkedin.com/in/risyaalex/" target="_blank"
+            ><i class="fa-brands fa-linkedin fa-2x" style="color: #000000"></i
+          ></a>
+        </footer>
       </div>
     </header>
     <main id="content">
@@ -212,13 +216,13 @@
         <h2>Contact Me:</h2>
         <p>
           You can reach me at
-          <a href="tel:+16476491887">(647) 649-1887</a> or via email at
+          <a href="tel:+16476491887">(647)649-1887</a> or via email at
           <a href="mailto:werba2010@gmail.com">werba2010@gmail.com</a>.
         </p>
 
         <p>
           Feel free to connect with me on
-          <a href="https://www.linkedin.com/in/risyaalex/"
+          <a href="https://www.linkedin.com/in/risyaalex/" target="_blank"
             ><i class="fa-brands fa-linkedin fa-xl" style="color: #000000"></i
           ></a>
         </p>
@@ -226,16 +230,23 @@
 
         <div>
           <form id="contactMe">
-            <label for="name"></label>
-            <input type="text" id="name" placeholder="Name" />
-            <label for="email"></label>
-            <input type="text" id="email" placeholder="Email Address" />
-
-            <label></label>
-            <input type="password" placeholder="Password" />
-
-            <button class="red" type="button">
-              <i class="icon ion-md-lock"></i> Log in
+            <input type="text" id="name" placeholder="Name" required />
+            <input
+              type="text"
+              id="email"
+              placeholder="Email Address"
+              required
+            />
+            <textarea
+              name="massage"
+              id="massage"
+              cols="30"
+              rows="7"
+              placeholder="Your message"
+              required
+            ></textarea>
+            <button type="button">
+              <i class="icon ion-md-lock"></i> Submit
             </button>
           </form>
         </div>

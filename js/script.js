@@ -135,6 +135,9 @@ document.addEventListener('DOMContentLoaded', function () {
     const cursor = document.getElementById('cursor');
     const cursorOutline = document.getElementById('cursor-outline');
 
+    cursor.style.pointerEvents = "none";
+    cursorOutline.style.pointerEvents = "none";
+
     function updateCursorPosition(event) {
       cursor.style.left = event.clientX + 'px';
       cursor.style.top = event.clientY + window.scrollY + 'px';

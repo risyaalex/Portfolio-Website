@@ -159,42 +159,61 @@ function addPulseEffect() {
 
 addPulseEffect();
 
-// new cursor
+// custom cursor
+
+function updateCursorPosition(event) {
+  const cursor = document.getElementById('cursor');
+  const cursorOutline = document.getElementById('cursor-outline');
+  cursor.style.left = event.clientX + 'px';
+  cursor.style.top = event.clientY + window.scrollY + 'px';
+
+  setTimeout(() => {
+    cursorOutline.style.left = event.clientX + 'px';
+    cursorOutline.style.top = event.clientY + window.scrollY + 'px';
+  }, 100);
+}
 
 document.addEventListener('DOMContentLoaded', function () {
-  if (window.innerWidth >= 991) {
-    const cursor = document.getElementById('cursor');
-    const cursorOutline = document.getElementById('cursor-outline');
+  const cursor = document.getElementById('cursor');
+  const cursorOutline = document.getElementById('cursor-outline');
 
-    cursor.style.pointerEvents = "none";
-    cursorOutline.style.pointerEvents = "none";
-
-    function updateCursorPosition(event) {
-      cursor.style.left = event.clientX + 'px';
-      cursor.style.top = event.clientY + window.scrollY + 'px';
-
-      setTimeout(() => {
-        cursorOutline.style.left = event.clientX + 'px';
-        cursorOutline.style.top = event.clientY + window.scrollY + 'px';
-      }, 100);
+  function setCursorStyle(isCustomCursor) {
+    if (isCustomCursor) {
+      cursor.style.pointerEvents = "none";
+      cursorOutline.style.pointerEvents = "none";
+    } else {
+      cursor.style.pointerEvents = "auto";
+      cursorOutline.style.pointerEvents = "auto";
     }
-
-    document.addEventListener('mousemove', updateCursorPosition);
-
-    window.addEventListener('scroll', function (event) {
-      const lastX = parseFloat(cursor.style.left);
-      const lastY = parseFloat(cursor.style.top) - window.scrollY;
-
-      cursor.style.left = lastX + 'px';
-      cursor.style.top = lastY + window.scrollY + 'px';
-
-      setTimeout(() => {
-        cursorOutline.style.left = lastX + 'px';
-        cursorOutline.style.top = lastY + window.scrollY + 'px';
-      }, 100);
-    });
-
   }
+
+  function checkAndSetCursorStyle() {
+    if (window.innerWidth >= 991) {
+      setCursorStyle(true);
+      document.addEventListener('mousemove', updateCursorPosition);
+      window.addEventListener('scroll', function () {
+        const lastX = parseFloat(cursor.style.left);
+        const lastY = parseFloat(cursor.style.top) - window.scrollY;
+        cursor.style.left = lastX + 'px';
+        cursor.style.top = lastY + window.scrollY + 'px';
+        setTimeout(() => {
+          cursorOutline.style.left = lastX + 'px';
+          cursorOutline.style.top = lastY + window.scrollY + 'px';
+        }, 100);
+      });
+    } else {
+      setCursorStyle(false); 
+      document.removeEventListener('mousemove', updateCursorPosition);
+      cursor.style.left = '0';
+      cursor.style.top = '0';
+      cursorOutline.style.left = '0';
+      cursorOutline.style.top = '0';
+    }
+  }
+
+  checkAndSetCursorStyle();
+
+  window.addEventListener('resize', checkAndSetCursorStyle);
 });
 
 

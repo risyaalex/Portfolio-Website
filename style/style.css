@@ -259,7 +259,7 @@ footer .fa-brands:hover {
     background-color: rgb(255, 106, 0)
 }
 
-.active {
+.portfolio .active {
     background-color: #000
 }
 
@@ -483,6 +483,7 @@ footer .fa-brands:hover {
     #menu :nth-child(3) {
         margin-top: 20px;
     }
+
     .logo {
          color: rgb(255, 106, 0);
         font-weight: bold;
@@ -516,11 +517,13 @@ footer .fa-brands:hover {
     h3 {
         font-size: 1rem;
     }
+
     #icons {
         display: flex;
         justify-content: space-between;
         padding: 0 5%;
     }
+
     .icons-image{
         width: 40px;
         margin-top: 30px;
@@ -543,21 +546,26 @@ footer .fa-brands:hover {
         float: none;
         margin: 0px;
     }
+
     #home {
         display: block;
     }
+
     .home-card .round {
         width: 300px;
     }
+
     .portfolio-item img {
         width: 120px;
         height: 120px;
     }
+
 }
 
 /* X-SMALL */
 
 @media only screen and (max-width: 300px) {
+
     #fixedLeftNav {
         display: block;
     }
@@ -570,9 +578,40 @@ footer .fa-brands:hover {
     #menu {
         padding: 0 20px 20px;
     }
-    .round {
+
+    .home-card .round {
         width: 200px;
     }
-    
+
+    #icons {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 5%;
+    } 
+
+    #contactMe {
+        max-width: 100%;
+        margin: 0;
+        padding: 20px 0;
+        background-color: #eee;
+        padding: 20px;
+
+    }
+
+    #contactMe input, #contactMe textarea {
+        padding: 10px;
+        border-radius: 10px;
+        border: 1px solid #999;
+        font-size: 1rem;
+        font-family: 'Roboto Mono', monospace;
+        max-width: 70%;
+    }
+
+    #contactMe button {
+        padding: 15px 15px;
+        border-radius: 10px;
+        max-width: 80%;
+        margin: 0;
+    }
 
 }

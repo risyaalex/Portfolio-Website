@@ -5,6 +5,37 @@ const icons = document.querySelectorAll(".itemsMenu i.fa-solid");
 const sections = document.querySelectorAll("#content section");
 const imgElement = document.getElementById("myphoto");
 
+
+window.onbeforeunload = () => {
+  for(const form of document.getElementsByTagName('form')) {
+    form.reset();
+  }
+}
+
+// On top
+
+const scrollTopButton = document.getElementById("scrollTopButton");
+
+function toggleScrollTopButton() {
+  if (window.scrollY > 300) {
+    scrollTopButton.style.display = "block";
+  } else {
+    scrollTopButton.style.display = "none";
+  }
+}
+
+window.addEventListener("scroll", toggleScrollTopButton);
+
+scrollTopButton.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth", 
+  });
+});
+
+toggleScrollTopButton();
+
+
 // Mobile menu show/hide
 mobileMenu.addEventListener("click", function () {
   menuItems.forEach(function(item) {

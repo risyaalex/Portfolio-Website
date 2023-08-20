@@ -250,6 +250,9 @@ footer .fa-brands:hover {
   max-width: 70%;
   margin: 0 auto;
   padding: 20px 0;
+  background-color: #eee;
+  padding: 20px;
+  border-radius: 10px;
 }
 
 #contactMe input, #contactMe textarea {
@@ -290,6 +293,27 @@ footer .fa-brands:hover {
 
 #contact .fa-brands:hover {
     color: rgb(255, 106, 0) !important;
+}
+
+#error {
+    color: red;
+}
+
+
+#scrollTopButton {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    /* z-index: 99; */
+    border: none;
+    font-size: 1.3rem;
+}
+#scrollTopButton .fa-solid {
+    color: #000;
+}
+#scrollTopButton .fa-solid:hover {
+   color: rgb(255, 106, 0) !important;
 }
     
 

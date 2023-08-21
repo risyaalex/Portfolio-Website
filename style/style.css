@@ -653,13 +653,18 @@ footer .fa-brands:hover {
         margin: 0;
     }
     .hrefs {
-        min-width: 50px;
-        margin: 20px 0 0;
+        min-width: 150px;
+        margin: 10px 0 0;
         float: none;
     }
     .button-demo {
         margin-left: 0;
-        padding: 10px 15px;
+        padding: 5px 15px;
         border-radius: 10px;
+        line-height: 2.2rem;
+    }
+    .portfolio-item img {
+        width: 160px;
+        height: 160px;
     }
 }

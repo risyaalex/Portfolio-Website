@@ -540,6 +540,7 @@ footer .fa-brands:hover {
     .hrefs {
         min-width: 150px;
         margin: 20px 10px 0;
+        float: none;
     }
 
 }

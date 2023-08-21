@@ -247,7 +247,7 @@ footer .fa-brands:hover {
 }
 
 .filter-button {
-    padding: 10px 20px;
+    padding: 10px 30px;
     margin: 5px;
     cursor: pointer;
     background-color: #666;
@@ -290,18 +290,19 @@ footer .fa-brands:hover {
     text-decoration: none !important;
 }
 
+.hrefs {
+    /* min-width: 150px; */
+    /* margin: 20px 10px 0; */
+    float: right;
+}
+
 .button-demo {
-    margin-left: 20px;
     background-color: #eee;
     padding: 10px 15px;
     border-radius: 10px;
 }
 
 .button-demo:hover {
-    margin-left: 20px;
-    background-color: #fff;
-    padding: 10px 15px;
-    border-radius: 10px;
     box-shadow: 0 0 5px #999;
 }
 
@@ -319,6 +320,8 @@ footer .fa-brands:hover {
     max-height: 100%;
     object-fit: contain;
 }
+
+
 
 
 /* Contact */
@@ -506,7 +509,7 @@ footer .fa-brands:hover {
         width: 100%;
     }
 
-    .active {
+    #fixedLeftNav .active {
         display: block;
         width: 80%;
     }
@@ -533,6 +536,10 @@ footer .fa-brands:hover {
     padding: 15px 60px;
     max-width: 100%;
 
+    }
+    .hrefs {
+        min-width: 150px;
+        margin: 20px 10px 0;
     }
 
 }

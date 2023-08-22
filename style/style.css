@@ -180,7 +180,7 @@ footer .fa-brands:hover {
 
 .round {
     border-radius: 50%;
-    width: 35%;
+    width: 30%;
 }
 
 .round:hover {
@@ -202,13 +202,15 @@ footer .fa-brands:hover {
     flex-wrap: wrap;
     gap: 20px;
 }
-
+#icons-container {
+    margin-top: 50px;
+}
 .icons-image {
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.5s ease, transform 0.5s ease;
     width: 50px;
-    margin-top: 100px;
+    margin-top: 50px;
 }
 
 .icons-image:hover {
@@ -221,6 +223,7 @@ footer .fa-brands:hover {
     background-color: rgba(230, 230, 230, 0.5);
     padding: 30px;
     border-radius: 20px;
+    clear: both;
 }
 
 #about h2, #contact h2, #projects h2 {
